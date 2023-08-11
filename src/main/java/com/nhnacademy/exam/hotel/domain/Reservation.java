@@ -1,6 +1,5 @@
 package com.nhnacademy.exam.hotel.domain;
 
 
-public class Hotel {
-
+public class Reservation {
 }
