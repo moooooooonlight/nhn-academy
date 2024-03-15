@@ -1,18 +1,18 @@
 ### 객실조회
 GET http://localhost:8080//v1/hotel-api/hotels/100/rooms
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjk5OTksImlzcyI6Im5obi1hY2FkZW15LW1hcmNvIiwiaWF0IjoxNjg5MzI1Njk4LCJleHAiOjE2ODk0MTIwOTh9.YWYcb2knEv03rQ82aIgggqNZ5Yn71O8gCYrDmStgT7Y
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjk5OTksImlzcyI6Im5obi1hY2FkZW15LW1hcmNvIiwiaWF0IjoxNzEwNTA4MDQwLCJleHAiOjE4ODMzMDgwNDB9.1W0KJj7mBuYhNPqEwfJzSvQD4JsNY-75qDvvlPqWiwE
 Content-Type: application/json
 
 
 ### 객실생성
 POST http://localhost:8080//v1/hotel-api/hotels/100/rooms
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjk5OTksImlzcyI6Im5obi1hY2FkZW15LW1hcmNvIiwiaWF0IjoxNjg5MzI1Njk4LCJleHAiOjE2ODk0MTIwOTh9.YWYcb2knEv03rQ82aIgggqNZ5Yn71O8gCYrDmStgT7Y
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjk5OTksImlzcyI6Im5obi1hY2FkZW15LW1hcmNvIiwiaWF0IjoxNzEwNTA4MDQwLCJleHAiOjE4ODMzMDgwNDB9.1W0KJj7mBuYhNPqEwfJzSvQD4JsNY-75qDvvlPqWiwE
 Content-Type: application/json
 
 {
-  "name" : "...",
-  "capacity" : 2,
-  "floor" : 3,
-  "hasBathtub" : true,
-  "viewType" : "oceanView"
+  "name": "...",
+  "capacity": 2,
+  "floor": 3,
+  "hasBathtub": true,
+  "viewType": "oceanView"
 }
