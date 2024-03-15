@@ -1,12 +1,12 @@
 ### 객실조회
 GET http://localhost:8080//v1/hotel-api/hotels/100/rooms
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjk5OTksImlzcyI6Im5obi1hY2FkZW15LW1hcmNvIiwiaWF0IjoxNzEwNTA4MDQwLCJleHAiOjE4ODMzMDgwNDB9.1W0KJj7mBuYhNPqEwfJzSvQD4JsNY-75qDvvlPqWiwE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEwMCwiaXNzIjoibmhuLWFjYWRlbXktbWFyY28iLCJpYXQiOjE3MTA1MTIyMDgsImV4cCI6MTc5NjkxMjIwOH0.-sx5W47k7xEI24iTPSSFUzxOH8LNLzboDjmJlqykPkE
 Content-Type: application/json
 
 
 ### 객실생성
 POST http://localhost:8080//v1/hotel-api/hotels/100/rooms
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjk5OTksImlzcyI6Im5obi1hY2FkZW15LW1hcmNvIiwiaWF0IjoxNzEwNTA4MDQwLCJleHAiOjE4ODMzMDgwNDB9.1W0KJj7mBuYhNPqEwfJzSvQD4JsNY-75qDvvlPqWiwE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEwMCwiaXNzIjoibmhuLWFjYWRlbXktbWFyY28iLCJpYXQiOjE3MTA1MTIyMDgsImV4cCI6MTc5NjkxMjIwOH0.-sx5W47k7xEI24iTPSSFUzxOH8LNLzboDjmJlqykPkE
 Content-Type: application/json
 
 {
