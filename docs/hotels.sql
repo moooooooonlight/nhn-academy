@@ -16,7 +16,6 @@ CREATE TABLE IF NOT EXISTS `rooms` (
     `created_at` DATETIME NOT NULL,
     PRIMARY KEY (`room_id`),
     INDEX `fk_Rooms_hotels_idx` (`hotel_id` ASC),
-    INDEX `uk_hotel_roomname` (`hotel_id` ASC, `name` ASC),
     CONSTRAINT `fk_Rooms_hotels`
     FOREIGN KEY (`hotel_id`)
     REFERENCES `hotels` (`hotel_id`)
