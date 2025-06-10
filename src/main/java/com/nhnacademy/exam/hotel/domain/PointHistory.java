@@ -9,9 +9,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,37 +24,26 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Getter
-@Table(name = "reservations")
-public class Reservation {
+@Table(name = "point_histories")
+public class PointHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reservationId;
+    private Long pointHistoryId;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "room_id", nullable = false)
-    private Room room;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="hotel_id", nullable=false)
     private User user;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "point_history_id", nullable = false)
-    private PointHistory pointHistory;
-
     @Column(nullable = false)
-    private String reservationCode;
-
-    @Column(nullable = false)
-    private Integer guestCount;
-
-    @Column(nullable = false)
-    private LocalDate checkInDate;
-
-    @Column(nullable = false)
-    private LocalDate checkOutDate;
-
     @Enumerated(EnumType.STRING)
+    private PointHistoryType type;
+
     @Column(nullable = false)
-    private ReservationStatus reservationStatus;
+    private Integer point;
+
+    @Column(nullable = false)
+    private LocalDate createdDate;
+
+    @Column(nullable = false)
+    private LocalDate deadLineDate;
 }

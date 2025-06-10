@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.time.LocalDateTime;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,12 +18,25 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Getter
-@Table(name = "hotels")
-public class Hotel {
+@Table(name = "point_policy")
+public class PointPolicy {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long hotelId;
+    private Long pointPolicyId;
 
     @Column(nullable = false)
     private String name;
+
+    @Column(nullable = false)
+    private Integer point;
+
+    @Column(nullable = false)
+    private PointType pointType;
+
+    @Column(nullable = false)
+    private Boolean isActive;
+
+    @Column(nullable = false)
+    private LocalDateTime createdAt;
 }
